@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+body {
+    background: #004a98;
+}
+.main-wrapper{
+
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: center;
+}
+.content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10%;
+    gap: 60px;
+}
+.main-wrapper img{
+    position: fixed;
+    top: 40px;
+    left: 60px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.main-wrapper h1, .main-wrapper h2{
+    font-size: 68px;
+    color: #fff;
+    width: 900px;
+    text-align: center;
+}
+.main-wrapper span{
+    color: #42B8FD;
+}
+
+.main-wrapper button{
+    width: 350px;
+    padding: 13px 25px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    border-radius: 28px;
+    transition: .3s ease-in-out;
+}
+.main-wrapper a{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+button i{
+    margin: 0 8px;
+}
+button:hover{
+    opacity: 1;
+}
+#sign-page{
+    scroll-snap-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+.sign-in-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+#sign-page button{
+    font-size: 25px;
+}
+
+@media (max-width: 765px) {
+    .main-wrapper h1, .main-wrapper h2{
+        font-size: 52px;
+        width: 700px;
+    }
+    .main-wrapper button{
+        padding: 10px 22px;
+        font-size: 15px;
+        width: 300px;
+    }
+    .sign-in-wrapper{
+        gap: 10%;
+    }
+    
+}
+
+@media (max-width: 592px) {
+    .main-wrapper h1, .main-wrapper h2{
+        font-size: 42px;
+        width: 500px;
+    }
+    .main-wrapper button{
+        padding: 8px 20px;
+        font-size: 15px;
+        width: 250px;
+    }
+    .sign-in-wrapper{
+        gap: 10%;
+    }
+    
+}
+@media (max-width: 473px) {
+    .main-wrapper h1, .main-wrapper h2{
+        font-size: 52px;
+        width: 400px;
+    }
+    .main-wrapper button{
+        padding: 10px 22px;
+        font-size: 20px;
+        width: 350px;
+    }
+    .sign-in-wrapper{
+        gap: 45px;
+        flex-direction: column;
+    }
+    .content{
+        gap: 35%;
+    }
+    
+}
+
+
+

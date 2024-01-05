@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background: #0c0c1d;
+  width: 100vw;
+  height: 100vh;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.home {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: center;
+}
+.home h3 {
+  display: none;
+}
+.home .user {
+  position: relative;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px 20px 16px 0;
+  box-shadow: 0 8px 12px #000;
+  align-items: center;
+}
+
+.logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  color: white;
+  margin-left: 9%;
+  font-size: 23px;
+  gap: 2%;
+  align-items: center;
+}
+.logo i{
+  color: #9340FF;
+  font-size: 32px;
+}
+.user-info{
+display: flex;
+flex-direction: row;
+justify-content: end;
+gap: 3%;
+
+}
+
+.user .main-info {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: end;
+  justify-content: center;
+}
+.main-info p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+.main-info button,
+.main-info a {
+  border: none;
+  background: linear-gradient(to right, #FF3C5F, #9340FF);
+  padding: 3px 8px;
+  border-radius: 11px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  font-weight: 500;
+}
+.user img,
+.community img,
+.cont img {
+  background: transparent;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 1px  solid #ececec;
+}
+
+.home-wrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 17%;
+}
+.left-wrapper{
+  margin-left: 10%
+}
+.left-wrapper h1{
+  margin-top: 25%;
+  color: white;
+  font-size: 66px;
+  width:380px;
+  ;
+
+}
+.left-wrapper span{
+  color: #9340FF;
+}
+.home-wrapper img{
+  width: 550px;
+}
+.home-wrapper button{
+  margin-top: 18%;
+  padding: 19px 49px;
+  border-radius: 32px;
+  border: none;
+  background: linear-gradient(to right, #FF3C5F, #9340FF);
+  cursor: pointer;
+  color: black;
+  font-weight: 600;
+  transition: 1s all ease-in;
+  font-size: 19px;
+}
+.home-wrapper button:hover{
+
+  background: linear-gradient(to left, #FF3C5F, #9340FF);
+}

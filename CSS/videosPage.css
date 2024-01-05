@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  body {
+    background: #0c0c1d;
+  }
+  .skillVideo {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: center;
+  }
+  
+  .search-videos {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 1%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+    position: relative;
+    margin-left: 33%;
+  }
+
+  .search-videos input{
+    padding: 14px 65px;
+    width: 480px;
+    padding-left: 33px;
+    border-radius: 34px;
+    background-color: transparent;
+    border: solid 2px #9340ff;
+    color: gray;
+    font-size: 15px;
+    outline: none;
+  }
+input[type="text"] {
+    text-align: left;
+  }
+
+  input[type="text"]:focus {
+    box-shadow: 12px 9px 12px rgb(0, 0, 0);
+  }
+  
+  .search-videos button {
+    position: absolute;
+    right: 0;
+    font-size: 17px;
+    padding: 11.72px 15px;
+    border-radius: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius:50px ;
+    background-color: #9340ff;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+  .search-videos button i{
+    margin-top: 3px;
+  }
+
+  .video-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 19%;
+    margin-bottom: 4%;
+    row-gap: 6%;
+  }
+  .video-wrapper iframe{
+    width: 250px;
+    height: 180px;
+  }
+  .video-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .video-content p{
+    text-align: center;
+    color: rgb(229, 228, 228);
+    font-size: 14px;
+    font-weight: 400;
+    width: 83%;
+  }
+.nav-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-button button{
+  padding: 3.2px 3.2px;
+  border-radius: 50%;
+  border: solid 4px #0c0c1d;
+  outline: solid 7px #9340ff;
+  background-color: #9340ff;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  opacity: 0.8;
+  margin-bottom: 2%;
+  align-items: center;
+  
+}
+.nav-button button i{
+  display: flex;
+  justify-content: center;
+ 
+
+}
+.nav-button button:hover{
+    opacity: 1;
+}
