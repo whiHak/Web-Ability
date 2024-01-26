@@ -10,17 +10,23 @@ $disability = $_POST["disability"]; // Fix the typo in the variable name
 $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 $errors = array();
 
+$conn = mysqli_connect('localhost', 'root', '', 'webability');
 
-$conn = new mysqli('localhost', 'root', '', 'webability');
-if ($conn->connect_error) {
-    die('Connection Fail: ' . $conn->connect_error);
+if (!$conn) {
+    die('Connection Fail: ' . mysqli_connect_error());
 } else {
-    $stmt = $conn->prepare("insert into registration (fullName, email, password, gender, phoneNumber, disability) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssss", $fullName, $email, $passwordHash, $gender, $phoneNumber, $disability); // Remove $confirmPassword from bind_param
-    $stmt->execute();
-     // Fix the typo in the echo statement
-     $stmt->close();
-     $conn->close();
-     include("../pages/Signin.php");
+    $stmt = mysqli_prepare($conn, "INSERT INTO registration (fullName, email, password, gender, phoneNumber, disability) VALUES (?, ?, ?, ?, ?, ?)");
+
+    if ($stmt) {
+        mysqli_stmt_bind_param($stmt, "ssssss", $fullName, $email, $passwordHash, $gender, $phoneNumber, $disability);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        mysqli_close($conn);
+
+        header('Location: ../pages/Signin.php');
+        exit();
+    } else {
+        die('Prepare statement failed: ' . mysqli_error($conn));
     }
+}
 ?>

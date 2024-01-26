@@ -21,8 +21,7 @@
             <input type="email" placeholder="Email" name="email"/>
             <input type="password" placeholder="Password" name="password" />
             <button class="login" ><input type="submit" value="Sign in" name="signin"></button>
-            <p><a href="./Signup.html">You don't have an account?</a>
-              
+            <p><a href="./Signup.php">You don't have an account?</a>            
             </p>
           </form>
         </div>

@@ -18,10 +18,14 @@
         <form action="../php/signup.php" method="post">
           <span class="mainTitle">Web Ability</span>
           <span class="pageTitle">Register</span>
-          <input type="text" placeholder="Full Name" name="full-name" />
-          <input type="email" placeholder="Email" name="email"/>
-          <input type="password" placeholder="Password" name="password"/>
-          <input type="password" placeholder="Confirm-password" name="confirm-password"/>
+          <input type="text" placeholder="Full Name" name="full-name" id="name_input" />
+          <p class="error"  id="name-error"></p>
+          <input type="email" placeholder="Email" name="email" id="email_input" />
+          <p class="error"  id="email-error"></p>
+          <input type="password" placeholder="Password" name="password" id="password_input" />
+          <p class="error"  id="error-password"></p>
+          <input type="password" placeholder="Confirm-password" name="confirm-password" id="confirm_input" />
+          <p class="error" id="confirm-error"></p>
 
           <div class="gender-wrapper">
             <label for="gender">Gender:</label>
@@ -38,6 +42,7 @@
             placeholder="Phone Number"
             id="phone"
           />
+          <p class="error"  id="phone-error"></p>
 
           <div class="disability-wrapper">
             <label for="disability">Disability:</label>
@@ -50,17 +55,18 @@
               <option value="other">Other/Unspecified</option>
             </select>
           </div>
+          <p class="error"></p>
           <div class="other-impairment-wrapper" style="display: none">
             <label for="disability">Specify Disability:</label>
             <input name="disability" type="text" placeholder="" id="disability" />
           </div>
 
           <button class="register" ><input type="submit" value="Sign Up"></button>
-          <p><a href="./Signin.html">You have an account?</a></p>
+          <p><a href="./Signin.php">You have an account?</a></p>
         </form>
       </div>
     </div>
 
-    <script src="../JS/index.js"></script>
+    <script src="../JS/signValidation.js"></script>
   </body>
 </html>
