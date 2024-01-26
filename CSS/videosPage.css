@@ -21,7 +21,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   height: 100vh;
   width: 100vw;
   scroll-snap-align: center;
@@ -80,6 +79,7 @@ h1 {
 }
 span {
   color: #9340ff;
+  text-transform: capitalize;
 }
 
 .video-wrapper {
@@ -93,10 +93,6 @@ span {
   overflow: scroll;
   width: 75vw;
 }
-.video-wrapper iframe {
-  width: 250px;
-  height: 180px;
-}
 .video-content {
   display: flex;
   justify-content: center;
@@ -105,8 +101,9 @@ span {
   scroll-snap-align: center;
 }
 .video-content img {
-  width: 360px;
-  height: 215px;
+  /* width: 360px; */
+  width: 100%;
+  /* height: 200px; */
   object-fit: cover;
   cursor: pointer;
 }

@@ -214,7 +214,8 @@ a {
 .bx-play-circle {
   color: #ffffff;
 }
-.detail-wrap {
+.detail-wrap,
+.detail-wraps {
   display: flex;
   flex-direction: column;
   align-self: flex-end;
@@ -226,10 +227,8 @@ a {
 .hide{
   margin-left: -30%;
 }
-.hides{
-  margin-left: -30%;
-}
-.detail-wrap p {
+.detail-wrap p,
+.detail-wraps p {
   padding: 5px 10%;
   /* background: linear-gradient(to right, #FF3C5F, #9340FF); */
   background: #5b3d85;
@@ -240,6 +239,8 @@ a {
   width: 185px;
   text-align: center;
 }
+
+
 .wrap a {
   text-decoration: none;
   color: inherit;

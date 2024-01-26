@@ -83,9 +83,7 @@ a {
   border: none;
   background: transparent;
   outline: none;
-}
-button:hover {
-  transform: scale(0.9);
+  padding: 0;
 }
 
 .formWrapper form p {
@@ -125,4 +123,11 @@ button:hover {
 .payment-form {
   display: none;
 }
-
+.error{
+  color: red;
+  font-weight: 400;
+  margin-top: 0;
+  padding-top: 0;
+  display: none;
+  align-self: flex-start;
+}
