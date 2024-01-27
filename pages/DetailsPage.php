@@ -12,15 +12,24 @@
     <title>Document</title>
   </head>
   <body>
+
+  <?php 
+    session_start();
+
+    if (!isset($_SESSION['id'])) {
+      header('Location: ../pages/Signin.php');
+      exit();
+    }
+  ?>
     <div class="details-wrapper">
       
       <div class="side-bar">
         <div class="user-side-bar">
           <div class="user-info-side-bar">
-            <p class="name">John smith</p>
-            <button><a href="#">Edit profile</a></button>
+            <p class="name"><?php echo $_SESSION['fullName']; ?></p>
+            <button><a href="#" id="log-out">Log out</a></button>
           </div>
-          <img src="../assets/hero.png" alt="profile image" />
+          <img src="<?php echo $_SESSION['imageData']; ?>" alt="profile image" />
         </div>
         
         <div class="content-wrap">
@@ -302,7 +311,14 @@
       </div>
     </div>
 
-
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const logOutBtn = document.getElementById('log-out');
+        logOutBtn.addEventListener('click', function () {
+          window.location.href = '../php/logout.php';
+        });
+      });
+    </script>
     <script src="../JS/detailsPage.js"></script>
   </body>
 </html>
