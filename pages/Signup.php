@@ -15,7 +15,7 @@
     <div class="formContainer">
       <div class="logo"><i class="bx bx-handicap"></i> WebAbility</div>
       <div class="formWrapper">
-        <form action="../php/signup.php" method="post">
+        <form action="../php/signup.php" method="post" enctype="multipart/form-data">
           <span class="mainTitle">Web Ability</span>
           <span class="pageTitle">Register</span>
           <input type="text" placeholder="Full Name" name="full-name" id="name_input" />
@@ -48,14 +48,22 @@
             <label for="disability">Disability:</label>
             <select name="disability" id="disability" required>
               <option value="">Select Disability</option>
-              <option value="visual impairment">Visual Impairment</option>
-              <option value="mobility impairement">Mobility Impairment</option>
-              <option value="hearing impairement">Hearing Impairment</option>
-              <option value="developemental imapairment">Developmental Impairment</option>
-              <option value="other">Other/Unspecified</option>
+              <option value="Visual">Visual Impairment</option>
+              <option value="Mobility">Mobility Impairment</option>
+              <option value="Hearing">Hearing Impairment</option>
+              <option value="Developemental">Developmental Impairment</option>
+              <option value="Other">Other/Unspecified</option>
             </select>
           </div>
           <p class="error"></p>
+          <div class="profile-image">
+            <label for="profile">
+              Add photo: 
+              <!-- <img src="../assets/Add.png" alt="add photo" style="width: 32px; margin-left: 30px;"> -->
+              <i class='bx bx-image-add'></i>
+            </label>
+            <input type="file" name="profile" id="profile" style="display:none;">
+          </div>
           <div class="other-impairment-wrapper" style="display: none">
             <label for="disability">Specify Disability:</label>
             <input name="disability" type="text" placeholder="" id="disability" />
