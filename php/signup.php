@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $gender = mysqli_real_escape_string($conn, $_POST['gender']);
     $phone_number = mysqli_real_escape_string($conn, $_POST['phone-number']);
     $disability = mysqli_real_escape_string($conn, $_POST['disability']);
+    $telegram = mysqli_real_escape_string($conn, $_POST['telegram']);
     
 
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -27,8 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     move_uploaded_file($_FILES["profile"]["tmp_name"], $target_file);
 
 
-    $sql = "INSERT INTO registration (fullName, email, password, gender, phoneNumber, disability, imageData) 
-            VALUES ('$full_name', '$email', '$hashed_password', '$gender', '$phone_number', '$disability', '$target_file')";
+    $sql = "INSERT INTO registration (fullName, email, password, gender, phoneNumber, disability, imageData, telegram) 
+            VALUES ('$full_name', '$email', '$hashed_password', '$gender', '$phone_number', '$disability', '$target_file', '$telegram')";
 
     if (mysqli_query($conn, $sql)) {
         header('Location: ../pages/Signin.php');

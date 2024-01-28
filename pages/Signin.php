@@ -14,13 +14,13 @@
   <body>
     <div class="formContainer">
       <div class="logo"><i class="bx bx-handicap"></i> WebAbility</div>
-      <div class="formWrapper">
+      <div class="formWrapper signinwrapper" >
         <form action="../php/signin.php" method="post">
           <span class="mainTitle">Web Ability</span>
           <span class="pageTitle">Login</span>
           <input type="email" placeholder="Email" name="email" />
           <input type="password" placeholder="Password" name="password" />
-          <button class="login"><input type="submit" /></button>
+          <button class="login"><input type="submit" value="Sign in" /></button>
           <p><a href="./Signup.php">You don't have an account?</a></p>
         </form>
       </div>

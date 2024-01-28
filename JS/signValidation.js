@@ -1,5 +1,3 @@
-
-
 const reg = document.querySelector('.register')
 reg.disabled = true;
 
@@ -84,6 +82,20 @@ function error(id, isValid, message){
       }
      
     }
+    if(id=='telegram_input'){
+      if(!isValid){
+        let errorElement = document.getElementById('telegram-error');
+        errorElement.textContent=message;
+        errorElement.style.display='block';
+        telegram.style.borderBottom='solid 1px red';
+      }
+      else{
+        let errorElement = document.getElementById('telegram-error');
+        errorElement.textContent ='';
+        errorElement.style.display='none';
+        telegram.style.borderBottom='solid 1px green';
+      }
+    }
   
   }
   
@@ -113,6 +125,11 @@ function error(id, isValid, message){
   let phoneNumber = document.getElementById('phone');
   phoneNumber.addEventListener('input', function(){
     phoneN();
+    
+  })
+  let telegram = document.getElementById('telegram_input');
+  telegram.addEventListener('input', function(){
+    telegramCheck();
     
   })
   
@@ -145,5 +162,11 @@ function error(id, isValid, message){
     const phone = document.getElementById('phone').value;
     var isValid = /(\+\s*2\s*5\s*1\s*9\s*(([0-9]\s*){8}\s*))|(0\s*9\s*(([0-9]\s*){8}))/.test(phone);
     error('phone', isValid, "Invalid Phone number format." )
+  
+  }
+  function telegramCheck(){
+    const telegram = document.getElementById('telegram_input').value.trim();
+    var isValid = /^@?[A-Za-z0-9_]{5,32}$/.test(telegram);
+    error('telegram_input', isValid, "Invalid Telegram" )
   
   }
