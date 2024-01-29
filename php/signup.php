@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $conn = mysqli_connect('localhost', 'root', '', 'webability');
 
 
@@ -27,16 +29,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $target_file = $target_dir . basename($_FILES["profile"]["name"]);
     move_uploaded_file($_FILES["profile"]["tmp_name"], $target_file);
 
+    $countemail = 0;
+    $check = "SELECT email FROM registration";
+    $result = mysqli_query($conn, $check);
 
-    $sql = "INSERT INTO registration (fullName, email, password, gender, phoneNumber, disability, imageData, telegram) 
-            VALUES ('$full_name', '$email', '$hashed_password', '$gender', '$phone_number', '$disability', '$target_file', '$telegram')";
-
-    if (mysqli_query($conn, $sql)) {
-        header('Location: ../pages/Signin.php');
-        exit();
-    } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    while ($row = mysqli_fetch_assoc($result)) {
+        if($row['email']== $email)
+        $countemail++;
     }
+
+    if($countemail > 0){
+        //error
+        $_SESSION['emailError'] = true;
+        header('Location: ../pages/SignUp.php');
+    }else{
+        $sql = "INSERT INTO registration(fullName, email, password, gender, phoneNumber, disability, imageData, telegram) 
+        VALUES ('$full_name', '$email', '$hashed_password', '$gender', '$phone_number', '$disability', '$target_file', '$telegram')";
+
+        if (mysqli_query($conn, $sql)) {
+            header('Location: ../pages/Signin.php');
+            exit();
+        } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
+    }
+       
 }
 
 

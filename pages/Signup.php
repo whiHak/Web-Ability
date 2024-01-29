@@ -17,17 +17,17 @@
       <div class="formWrapper">
         <span class="mainTitle">Web Ability</span>
           <span class="pageTitle">Register</span>
-        <form action="../php/signup.php" method="post" enctype="multipart/form-data">
+        <form action="../php/signup.php" method="post" enctype="multipart/form-data" id="form"> 
           
           <div class="form-content">
             <div class="left-form">
-              <input type="text" placeholder="Full Name" name="full-name" id="name_input" />
+              <input type="text" placeholder="Full Name" name="full-name" id="name_input" required />
               <p class="error"  id="name-error"></p>
-              <input type="email" placeholder="Email" name="email" id="email_input" />
+              <input type="email" placeholder="Email" name="email" id="email_input" required />
               <p class="error"  id="email-error"></p>
-              <input type="password" placeholder="Password" name="password" id="password_input" />
+              <input type="password" placeholder="Password" name="password" id="password_input" required/>
               <p class="error"  id="error-password"></p>
-              <input type="password" placeholder="Confirm-password" name="confirm-password" id="confirm_input" />
+              <input type="password" placeholder="Confirm-password" name="confirm-password" id="confirm_input" required />
               <p class="error" id="confirm-error"></p>
               
               <div class="gender-wrapper">
@@ -47,7 +47,7 @@
                 name="phone-number"
                 type="text"
                 placeholder="Phone Number"
-                id="phone"
+                id="phone" required
               />
               <p class="error"  id="phone-error"></p>
               
@@ -74,7 +74,14 @@
             </div>
           </div>
 
-          <button class="register" ><input type="submit" value="Sign Up"></button>
+          <?php 
+            session_start();
+            if(isset($_SESSION["emailError"])){
+              echo '<p class="emailerror">Email has already Registered</p>';
+              session_destroy();
+            }
+          ?>
+          <button class="register" id="button"><input type="submit" value="Sign Up"></button>
           <p><a href="./Signin.php">You have an account?</a></p>
         </form>
       </div>

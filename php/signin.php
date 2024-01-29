@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['fullName'] = $row['fullName'];
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['imageData'] = $row['imageData'];
+                $_SESSION['accountDisabilityType'] = $row['disability'];
 
                 header('Location: ../pages/Home.php');
                 exit();
