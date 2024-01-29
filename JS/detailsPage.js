@@ -20,5 +20,11 @@ eduArrow.addEventListener('click', function(){
 
 const ebtn = document.querySelectorAll('#v-btn')
 
-btn.addEventListener('click', displayVideos)
+let menu = document.querySelector('#menu-icon');
+let sidebar = document.querySelector('.side-bar');
+
+menu.onclick = () => {
+    sidebar.classList.toggle('open');
+    menu.classList.toggle('bx-x');
+}
 

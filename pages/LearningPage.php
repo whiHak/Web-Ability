@@ -2,8 +2,8 @@
   <div class="title">
     <h2>Learning</h2>
     <p>
-      Use Kinnectric to connect with people you know.<br />
-      Kinnectric can also connect you to people outside your usual circle.
+      Knowledge Center: Unlock Your Potential.<br />
+      Dive into a wealth of educational resources and materials. 
     </p>
   </div>
   <div class="wrap">
@@ -13,8 +13,8 @@
         <div>
           <h2>Education</h2>
           <p>
-            There is just enough space here for several lines of text. Make sure
-            you get your message across clearly yet concisely.
+          Empowering Learning for All. Discover 
+          inclusive resources and courses designed to meet diverse learning needs.
           </p>
         </div>
         <i class="bx bx-right-arrow-alt" id="edu-arrow"></i>
@@ -35,10 +35,10 @@
       <i class="bx bx-play-circle"></i>
       <div class="wrap-info">
         <div>
-          <h2>Watch Videos</h2>
+          <h2>Other Videos</h2>
           <p>
-            There is just enough space here for several lines of text. Make sure
-            you get your message across clearly yet concisely.
+          Access a diverse collection of 
+           videos. Discover captivating content to expand your knowledge and skills.
           </p>
         </div>
         <i class="bx bx-right-arrow-alt" id="video-arrow"></i>

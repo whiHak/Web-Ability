@@ -12,37 +12,36 @@
     <title>Document</title>
   </head>
   <body>
-
-  <?php 
+    <?php 
     session_start();
 
     if (!isset($_SESSION['id'])) {
       header('Location: ../pages/Signin.php');
       exit();
     }
-  ?>
+    ?>
     <div class="details-wrapper">
+      <div class="bx bx-menu" id="menu-icon"></div>
       <?php 
         include("sidebar.php");
       ?>
-      
+
       <div class="de-wrapper">
-        <div class="logo"><i class='bx bx-handicap'></i> WebAbility</div>
+        <div class="logo"><i class="bx bx-handicap"></i> WebAbility</div>
         <?php 
           include("LearningPage.php");
           include("CommunityPage.php");
           include("SupportPage.php");
           include("EventPage.php");
         ?>
-
       </div>
     </div>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const logOutBtn = document.getElementById('log-out');
-        logOutBtn.addEventListener('click', function () {
-          window.location.href = '../php/logout.php';
+      document.addEventListener("DOMContentLoaded", function () {
+        const logOutBtn = document.getElementById("log-out");
+        logOutBtn.addEventListener("click", function () {
+          window.location.href = "../php/logout.php";
         });
       });
     </script>
