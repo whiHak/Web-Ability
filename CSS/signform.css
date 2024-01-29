@@ -143,6 +143,12 @@ a {
   
 }
 
+.formWrapper form .emailerror{
+  position: absolute;
+  color: red;
+  margin-top: 20%;
+}
+
 .error{
   color: red !important;
   font-weight: 400;
