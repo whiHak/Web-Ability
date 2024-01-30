@@ -14,11 +14,6 @@
     <div class="video-page-wrapper">
       <div class="head">
         <h1>Watch "<span id="head-txt">Emotional Support</span>" Videos</h1>
-
-        <div class="search-videos">
-          <input type="text" placeholder="Search..."/>
-          <button><i class="bx bx-search-alt-2"></i></button>
-        </div>
       </div>
       <div class="video-wrapper">
         <div class="cards">video cards</div>

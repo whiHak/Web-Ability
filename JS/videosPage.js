@@ -31,12 +31,11 @@ function createVideoCard(title, subtitle, imagePath, id) {
 const videos = document.querySelector(".video-wrapper");
 
 fetch(
-  `https://youtube-search-and-download.p.rapidapi.com/search?query=${headText}%20related%20with%20disability`,
+  `https://youtube-search-and-download.p.rapidapi.com/search?query=${headText}%20for%20disable%20commmunity`,
   options
 )
   .then((response) => response.json())
   .then((response) => {
-    console.log(response);
 
     videos.innerHTML = "";
 

@@ -2,6 +2,6 @@
     session_start();
     session_destroy();
     
-    header('Location: ../pages/Signin.php');
+    header('Location: ../index.php');
     exit();
 ?>

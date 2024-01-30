@@ -8,14 +8,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../CSS/home.css" />
-    <title>Document</title>
+    <title>WebAbility</title>
   </head>
   <body>
     <?php 
       session_start();
 
       if (!isset($_SESSION['id'])) {
-        header('Location: ../pages/Signin.php');
+        header('Location: ../index.php');
         exit();
       }
     ?>
@@ -43,10 +43,10 @@
       <div class="home-wrapper">
         <div class="left-wrapper">
           <h1>You Are <span>Not </span> Alone!</h1>
-          <button><a href="./DetailsPage.php">Get Started</a></button>
+          <button><a href="./DetailsPage.php">Start Your Journey</a></button>
         </div>
 
-        <img src="../assets/home-page-image.svg" alt="">
+        <img src="../assets/main-home-image.svg" alt="">
       </div>
     
     </div>

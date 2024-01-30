@@ -21,10 +21,10 @@
       </div>
     </div>
     <div class="detail-wrap hide">
-      <p><a href="./VideosPage.html?q=blind-community">Blind Community</a></p>
-      <p><a href="./VideosPage.html?q=deaf-community">Deaf Community</a></p>
+      <p><a href="./VideosPage.php?q=blind-community-braille-learning-videos">Blind Community</a></p>
+      <p><a href="./VideosPage.php?q=sign-language-learning">Deaf Community</a></p>
       <p>
-        <a href="./VideosPage.html?q=disable-community-support"
+        <a href="./VideosPage.php?q=disable-community-academic-educaiton"
           >For Other Disabilities</a
         >
       </p>
@@ -46,11 +46,11 @@
     </div>
     <div class="detail-wraps hide">
       <p>
-        <a href="./VideosPage.html?q=emotional-support">Emotional Support</a>
+        <a href="./VideosPage.php?q=emotional-support">Emotional Support</a>
       </p>
-      <p><a href="./VideosPage.html?q=documenteries">Documenteries</a></p>
+      <p><a href="./VideosPage.php?q=documenteries">Documenteries</a></p>
       <p>
-        <a href="./VideosPage.html?q=additional-skills">Additional skills</a>
+        <a href="./VideosPage.php?q=additional-skills">Additional skills</a>
       </p>
     </div>
   </div>

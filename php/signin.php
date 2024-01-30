@@ -29,10 +29,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header('Location: ../pages/Home.php');
                 exit();
             } else {
-                echo "Incorrect password!";
+                $_SESSION['emailError'] = true;
+                header('Location: ../pages/Signin.php');
             }
         } else {
-            echo "User not found. Please register first.";
+            $_SESSION['emailError'] = true;
+            header('Location: ../pages/Signin.php');
         }
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);

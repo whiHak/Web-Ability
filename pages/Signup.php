@@ -66,7 +66,6 @@
               <div class="profile-image">
                 <label for="profile">
                   Add photo: 
-                  <!-- <img src="../assets/Add.png" alt="add photo" style="width: 32px; margin-left: 30px;"> -->
                   <i class='bx bx-image-add'></i>
                 </label>
                 <input type="file" name="profile" id="profile" style="display:none;">
@@ -81,7 +80,7 @@
               session_destroy();
             }
           ?>
-          <button class="register" id="button"><input type="submit" value="Sign Up"></button>
+          <button class="register" ><input type="submit" value="Sign Up" id="button"></button>
           <p><a href="./Signin.php">You have an account?</a></p>
         </form>
       </div>

@@ -144,9 +144,7 @@ a {
 }
 
 .formWrapper form .emailerror{
-  position: absolute;
-  color: red;
-  margin-top: 20%;
+  color: red; 
 }
 
 .error{
@@ -158,4 +156,43 @@ a {
   align-self: flex-start;
   position: absolute;
   margin-top: -22px !important;
+  width: 23%;
+}
+@media (max-width: 1066px){
+  .form-content{
+    display: flex;
+    flex-direction: column;
+  }
+  .error {
+    width: 79%;
+  }
+  .formWrapper {
+    min-height: max-content;
+    overflow: auto;
+  }
+
+}
+@media (max-width: 810px){
+  .logo p{
+    display: none;
+  }
+}
+@media (max-width: 658px){
+  .error {
+    width: 79%;
+  }
+}
+
+@media (max-width: 626px){
+  .formWrapper {
+    width: 100%;
+  }
+}
+@media (max-width: 618px){
+
+.logo i {
+  position: fixed;
+    top: 13px;
+    right: 3px;
+}
 }

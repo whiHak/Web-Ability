@@ -20,6 +20,13 @@
           <span class="pageTitle">Login</span>
           <input type="email" placeholder="Email" name="email" />
           <input type="password" placeholder="Password" name="password" />
+          <?php 
+            session_start();
+            if(isset($_SESSION["emailError"])){
+              echo '<p class="emailerror">Incorrect Email or password</p>';
+              session_destroy();
+            }
+          ?>
           <button class="login"><input type="submit" value="Sign in" /></button>
           <p><a href="./Signup.php">You don't have an account?</a></p>
         </form>
