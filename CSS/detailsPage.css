@@ -103,7 +103,9 @@ a {
   opacity: 0.6;
 }
 .content-side-bar:hover a,
-.content-side-bar:hover i {
+.content-side-bar:hover i,
+.content-side-bar:focus a,
+.content-side-bar:focus i {
   color: #9340ff !important;
   opacity: 1;
 }

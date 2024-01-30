@@ -48,7 +48,7 @@
       <p>
         <a href="./VideosPage.php?q=emotional-support">Emotional Support</a>
       </p>
-      <p><a href="./VideosPage.php?q=documenteries">Documenteries</a></p>
+      <p><a href="./VideosPage.php?q=documentary">Documenteries</a></p>
       <p>
         <a href="./VideosPage.php?q=additional-skills">Additional skills</a>
       </p>

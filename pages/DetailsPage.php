@@ -9,7 +9,8 @@
     />
     <link rel="stylesheet" href="../CSS/home.css" />
     <link rel="stylesheet" href="../CSS/detailsPage.css" />
-    <title>Document</title>
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+    <title>WebAbility</title>
   </head>
   <body>
     <?php 

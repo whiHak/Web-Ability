@@ -141,7 +141,7 @@ a {
   background: linear-gradient(to left, #ff3c5f, #9340ff);
 }
 @media (max-width: 1000px) {
-  .home-wrapper img {
+  .home img {
     display: none;
   }
 }

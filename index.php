@@ -8,7 +8,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./CSS/home.css" />
-    <title>Document</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <title>WebAbility</title>
   </head>
   <body>
     <div class="home">
@@ -27,7 +28,6 @@
     
     </div>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./JS/index.js"></script>
   </body>
 </html>

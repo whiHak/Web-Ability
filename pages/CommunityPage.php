@@ -17,7 +17,7 @@
         die('Connection failed: ' . mysqli_connect_error());
       }
 
-      $limit = 8;
+      $limit = 9;
       $sql = "SELECT * FROM registration WHERE disability='" . $_SESSION['accountDisabilityType'] . "' LIMIT $limit";
 
       $result = mysqli_query($conn, $sql);

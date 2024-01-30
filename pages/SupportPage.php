@@ -15,7 +15,7 @@
         
         <div class="detail-info">
 
-          <h1>Abenezer Tamiru</h1>
+          <h1>Meseret Tariku</h1>
           <p>
             <i class="bx bx-phone"></i> Phone:
             <br />
@@ -25,7 +25,7 @@
           <p>
             <i class="bx bxl-telegram"></i> Telegram:
             <br />
-            @abenezt
+            @meseret123
           </p>
 
           <p>
@@ -51,7 +51,7 @@
       <img src="../assets/supportPersonTwo.jpg" alt="Get Support" />
       <div class="info">
         <div class="detail-info">
-          <h1>Mengistu Derage</h1>
+          <h1>Yetnebersh Neguse</h1>
           <p>
             <i class="bx bx-phone"></i> Phone:
             <br />
@@ -61,19 +61,19 @@
           <p>
             <i class="bx bxl-telegram"></i> Telegram:
             <br />
-            @mengistuderage
+            @yetnebersh
           </p>
 
           <p>
             <i class="bx bx-envelope"></i> Email:
             <br />
-            mengistuderage@gmail.com
+            yetnebersh@gmail.com
           </p>  
 
           <p>
             <i class="bx bx-current-location"></i> Location:
             <br />
-            Jimma, JIT University
+            Addis Ababa, Ethiopia
           </p>
         </div>
       </div>
@@ -81,82 +81,5 @@
         <a href="#first-card"><i class="bx bx-left-arrow-alt"></i></a>
       </button>
     </div>
-    <div id="third-card" class="card">
-      <img src="../assets/supportPersonThree.jpg" alt="Get Support" />
-      <div class="info">
-        
-        
-        <div class="detail-info">
-
-          <h1>Abenezer Tamiru</h1>
-          <p>
-            <i class="bx bx-phone"></i> Phone:
-            <br />
-            0969954718
-          </p>
-
-          <p>
-            <i class="bx bxl-telegram"></i> Telegram:
-            <br />
-            @abenezt
-          </p>
-
-          <p>
-            <i class="bx bx-envelope"></i> Email:
-            <br />
-            abenezertamiru6@gmail.com
-          </p>
-
-          <p>
-            <i class="bx bx-current-location"></i> Location:
-            <br />
-            Jimma, JIT University
-          </p>
-        </div>
-      </div>
-      
-      <button>
-        <a href="#second-card"><i class="bx bx-right-arrow-alt"></i></a>
-      </button>
-    </div>
-    <div id="forth-card" class="card">
-      <img src="../assets/supportPersonFour.jpg" alt="Get Support" />
-      <div class="info">
-        
-        
-        <div class="detail-info">
-
-          <h1>Abenezer Tamiru</h1>
-          <p>
-            <i class="bx bx-phone"></i> Phone:
-            <br />
-            0969954718
-          </p>
-
-          <p>
-            <i class="bx bxl-telegram"></i> Telegram:
-            <br />
-            @abenezt
-          </p>
-
-          <p>
-            <i class="bx bx-envelope"></i> Email:
-            <br />
-            abenezertamiru6@gmail.com
-          </p>
-
-          <p>
-            <i class="bx bx-current-location"></i> Location:
-            <br />
-            Jimma, JIT University
-          </p>
-        </div>
-      </div>
-      
-      <button>
-        <a href="#second-card"><i class="bx bx-right-arrow-alt"></i></a>
-      </button>
-    </div>
-
   </div>
 </div>
