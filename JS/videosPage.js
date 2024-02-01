@@ -38,9 +38,8 @@ const pageNumberElement = document.getElementById("pageNumber");
 pageNumberElement.innerText = currentPage;
 
 function updateVideosForPage(videosData) {
-  videos.innerHTML = ""; // Clear current videos
+  videos.innerHTML = "";
 
-  // Calculate start and end index for slicing the array
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const itemsForPage = videosData.slice(startIndex, endIndex);
@@ -52,11 +51,9 @@ function updateVideosForPage(videosData) {
     );
   });
 
-  // Update pagination controls
   document.getElementById("prev").disabled = currentPage === 1;
   document.getElementById("next").disabled = endIndex >= videosData.length;
 
-  // Add click events for pagination buttons
   document.getElementById("prev").onclick = () => changePage(-1);
   document.getElementById("next").onclick = () => changePage(1);
 }

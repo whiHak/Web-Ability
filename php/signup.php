@@ -4,14 +4,11 @@ session_start();
 
 $conn = mysqli_connect('localhost', 'root', '', 'webability');
 
-
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
     $full_name = mysqli_real_escape_string($conn, $_POST['full-name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
@@ -21,16 +18,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $disability = mysqli_real_escape_string($conn, $_POST['disability']);
     $telegram = mysqli_real_escape_string($conn, $_POST['telegram']);
 
-
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
+    $fileName = basename($_FILES["profile"]["name"]);
 
-    $target_dir = "../uploads/";
-    $target_file = $target_dir . basename($_FILES["profile"]["name"]);
-    move_uploaded_file($_FILES["profile"]["tmp_name"], $target_file);
+    $targetDirectory1 = "../uploads/";
+    $targetFile1 = $targetDirectory1 . $fileName;
+    move_uploaded_file($_FILES["profile"]["tmp_name"], $targetFile1);
 
-    $target_file2 = "../admin/uploads/" . basename($_FILES["profile"]["name"]);
-    move_uploaded_file($_FILES["profile"]["tmp_name"], $target_file2);
+    $targetDirectory2 = "../admin/uploads/";
+    $targetFile2 = $targetDirectory2 . $fileName;
+    copy($targetFile1, $targetFile2);
 
     $countemail = 0;
     $check = "SELECT email FROM registration";
@@ -42,12 +40,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if ($countemail > 0) {
-        //error
         $_SESSION['emailError'] = true;
         header('Location: ../pages/SignUp.php');
     } else {
         $sql = "INSERT INTO registration(fullName, email, password, gender, phoneNumber, disability, imageData, telegram) 
-        VALUES ('$full_name', '$email', '$hashed_password', '$gender', '$phone_number', '$disability', '$target_file', '$telegram')";
+        VALUES ('$full_name', '$email', '$hashed_password', '$gender', '$phone_number', '$disability', '$targetFile1', '$telegram')";
 
         if (mysqli_query($conn, $sql)) {
             header('Location: ../pages/Signin.php');
@@ -57,6 +54,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 }
-
 
 mysqli_close($conn);

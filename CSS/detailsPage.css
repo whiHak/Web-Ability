@@ -319,10 +319,7 @@ a {
   scroll-behavior: smooth;
   overflow-x: scroll;
 }
-.support-wrapper .card:nth-child(1), 
-.support-wrapper .card:nth-child(2),
-.support-wrapper .card:nth-child(3),
-.support-wrapper .card:nth-child(4) {
+.support-wrapper .card {
   display: flex;
   margin: 0 20%;
   gap: 4%;
