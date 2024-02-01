@@ -30,63 +30,31 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 30px;
   width: 100%;
 }
-
-.search-videos {
-  display: inline-flex;
-  flex-direction: row;
-  gap: 1%;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1%;
-  position: relative;
-  margin: 3% 3% 0 0;
-}
-
-.search-videos input {
-  padding: 14px 65px;
-  width: 480px;
-  padding-left: 33px;
-  border-radius: 34px;
-  background-color: transparent;
-  border: solid 2px #9340ff;
-  color: gray;
+.head a {
+  text-decoration: none;
+  background: linear-gradient(to right, #ff3c5f, #9340ff);
+  padding: 10px 18px;
   font-size: 15px;
-  outline: none;
-}
-
-.search-videos button {
-  position: absolute;
-  right: 0;
-  font-size: 17px;
-  padding: 11.72px 15px;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  background-color: #9340ff;
-  color: white;
-  cursor: pointer;
-  border: none;
-}
-.search-videos button i {
-  margin-top: 3px;
+  font-weight: bold;
+  color: #ececec;
+  border-radius: 28px;
 }
 
 h1 {
   color: #ececec;
   text-align: center;
-  margin: 3% 0 0 3%;
 }
 span {
   color: #9340ff;
   text-transform: capitalize;
 }
-
 .video-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  margin: 3%;
   gap: 20px;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -116,4 +84,23 @@ span {
 .video-content .subtitle {
   font-size: 16px;
   color: lightgray;
+}
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+#prev,
+#next {
+  background: linear-gradient(to right, #ff3c5f, #9340ff);
+  font-size: 14px;
+  padding: 5px 17px;
+  border-radius: 17px;
+  color: #ececec;
+  border: none;
+}
+#pageNumber {
+  color: #ececec;
 }

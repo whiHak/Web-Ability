@@ -200,8 +200,10 @@ a {
   padding: 20px 0 20px 7%;
   border-radius: 12px;
 }
-.wrap h2 {
+.wrap h3 {
   font-size: 40px;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .wrap .bxs-school,
@@ -317,16 +319,19 @@ a {
   scroll-behavior: smooth;
   overflow-x: scroll;
 }
-#first-card,
-#second-card,
-#third-card,
-#third-card {
+.support-wrapper .card:nth-child(1), 
+.support-wrapper .card:nth-child(2),
+.support-wrapper .card:nth-child(3),
+.support-wrapper .card:nth-child(4) {
   display: flex;
-  margin: 0 12%;
+  margin: 0 20%;
   gap: 4%;
   justify-content: center;
   align-items: center;
   scroll-snap-align: center;
+}
+.support-wrapper .card:last-child  button{
+  display: none;
 }
 .support-wrapper .info {
   display: flex;
@@ -414,12 +419,12 @@ a {
   width: 400px;
   border-radius: 14%;
 }
-.Event-discription {
+.Event-description {
   display: flex;
   flex-direction: column;
 }
-.Event-discription button {
-  width: 80%;
+.link  {
+  width: 100%;
   padding: 10px 23px;
   background: linear-gradient(to right, #ff3c5f, #9340ff);
   color: white;
@@ -429,20 +434,21 @@ a {
   cursor: pointer;
 }
 
-.Event-discription button:hover {
+.link :hover {
   opacity: 0.7;
 }
-.Event-discription i {
+.icon {
   align-items: center;
   align-content: center;
   justify-content: center;
   font-size: 12px;
 }
-.Event-discription h2 {
+.eventtitle  {
+  font-weight: 700;
   font-size: 55px;
   color: white;
 }
-.Event-discription p {
+.eventdiscription {
   margin: 7% 0;
   width: 80%;
   font-size: 14px;

@@ -2,23 +2,22 @@
 
 
 
-const eduArrow = document.getElementById("edu-arrow")
-const videoArrow = document.getElementById("video-arrow")
+const contentDiv = document.querySelectorAll(".cont-wrapper")
+// const OtherDiv = document.querySelector(".detail-wraps")
 
 
 function toggleBtns (classNames, className){
-    document.querySelector(classNames).classList.toggle(className);
-    console.log(classNames);
+    console.log(classNames)
+    const a = document.querySelector(classNames).classList.toggle(className);
+    console.log(a);
 }
 
-videoArrow.addEventListener('click', function () {
-    toggleBtns(".detail-wraps","hide");
-});
-eduArrow.addEventListener('click', function(){
-    toggleBtns(".detail-wrap", "hide");
-});
-
-const ebtn = document.querySelectorAll('#v-btn')
+contentDiv.forEach((div)=>{
+    div.addEventListener('click', function(){
+        console.log(this.id)
+            toggleBtns(this.id =="first-div" ? ".detail-wrap":".detail-wraps", "hide");
+        });
+})
 
 let menu = document.querySelector('#menu-icon');
 let sidebar = document.querySelector('.side-bar');

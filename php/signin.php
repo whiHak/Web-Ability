@@ -47,4 +47,3 @@ if (!isset($_SESSION['id'])) {
 }
 
 mysqli_close($conn);
-?>

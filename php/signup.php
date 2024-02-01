@@ -11,7 +11,7 @@ if (!$conn) {
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-   
+
     $full_name = mysqli_real_escape_string($conn, $_POST['full-name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phone_number = mysqli_real_escape_string($conn, $_POST['phone-number']);
     $disability = mysqli_real_escape_string($conn, $_POST['disability']);
     $telegram = mysqli_real_escape_string($conn, $_POST['telegram']);
-    
+
 
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
@@ -29,20 +29,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $target_file = $target_dir . basename($_FILES["profile"]["name"]);
     move_uploaded_file($_FILES["profile"]["tmp_name"], $target_file);
 
+    $target_file2 = "../admin/uploads/" . basename($_FILES["profile"]["name"]);
+    move_uploaded_file($_FILES["profile"]["tmp_name"], $target_file2);
+
     $countemail = 0;
     $check = "SELECT email FROM registration";
     $result = mysqli_query($conn, $check);
 
     while ($row = mysqli_fetch_assoc($result)) {
-        if($row['email']== $email)
-        $countemail++;
+        if ($row['email'] == $email)
+            $countemail++;
     }
 
-    if($countemail > 0){
+    if ($countemail > 0) {
         //error
         $_SESSION['emailError'] = true;
         header('Location: ../pages/SignUp.php');
-    }else{
+    } else {
         $sql = "INSERT INTO registration(fullName, email, password, gender, phoneNumber, disability, imageData, telegram) 
         VALUES ('$full_name', '$email', '$hashed_password', '$gender', '$phone_number', '$disability', '$target_file', '$telegram')";
 
@@ -50,12 +53,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header('Location: ../pages/Signin.php');
             exit();
         } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
     }
-       
 }
 
 
 mysqli_close($conn);
-?>
