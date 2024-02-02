@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $countemail++;
     }
 
-    if ($countemail > 0) {
+    if ($countemail > 0 && $email == "admin@gmail.com") {
         $_SESSION['emailError'] = true;
         header('Location: ../pages/SignUp.php');
     } else {
